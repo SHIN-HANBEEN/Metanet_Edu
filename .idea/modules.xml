@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ex01/Ex01.iml" filepath="$PROJECT_DIR$/Ex01/Ex01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Head-First-Design-Patterns-master/Head-First-Design-Patterns-master.iml" filepath="$PROJECT_DIR$/Head-First-Design-Patterns-master/Head-First-Design-Patterns-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA_BASIC_01/JAVA_BASIC_01.iml" filepath="$PROJECT_DIR$/JAVA_BASIC_01/JAVA_BASIC_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA_BASIC_SCOPE/JAVA_BASIC_SCOPE.iml" filepath="$PROJECT_DIR$/JAVA_BASIC_SCOPE/JAVA_BASIC_SCOPE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA_Basic_03_OOP/JAVA_Basic_03_OOP.iml" filepath="$PROJECT_DIR$/JAVA_Basic_03_OOP/JAVA_Basic_03_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Labs.iml" filepath="$PROJECT_DIR$/.idea/Labs.iml" />
+    </modules>
+  </component>
+</project>

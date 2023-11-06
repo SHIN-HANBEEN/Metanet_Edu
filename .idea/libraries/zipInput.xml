@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zipInput">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Head-First-Design-Patterns-master/zipInput.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
