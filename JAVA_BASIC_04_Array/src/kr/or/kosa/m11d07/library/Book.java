@@ -1,6 +1,8 @@
 package kr.or.kosa.m11d07.library;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
     final String isbn; //도서번호
     String title; //도서제목
     int price; //도서 가격

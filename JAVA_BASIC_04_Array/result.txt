@@ -1,0 +1,2 @@
+word = C:\temp\a.txt
+word = C:\temp\new.txt
