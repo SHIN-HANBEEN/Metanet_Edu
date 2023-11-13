@@ -1,0 +1,88 @@
+package kr.or.kosa.m11d13;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+/*
+    JDBC 작업
+
+    1. select
+    1.1 결과 집합 생성
+
+
+    2. insert , update , delete
+    2.1 결과 집합 생성 없어요(x) >> resultSet (x)
+    2.2 반영결과 return (반영된 행의 수 ) >> update  5건 수정 >> return 5;
+
+    ex)
+    update emp set sal=0; >> 실행 >> update 14건 >> return 14
+    update emp set sal=100 where empno=9999 >> update 0건 >> return 0
+
+    결과를 받아서 자바코드 로직처리
+
+    Today key Point
+    1. Oracle DML (developer , Cmd (sqlplus), Tool) 작업 commit or rollback  강제
+    2. JDBC API 사용해서 Oracle DML 작업을 수행하면 >> default >> auto commit >> 실반영
+    3. JDBC API 사용해서 JAVA 코드에서 delete from emp 실행 >> JDBC 자동 commit >> 실반영
+    4. 그래서 JDBC API 옵션을 통해서 commit , rollback  강제하는 방법 제공
+
+    begin
+        A계좌 인출 (update...
+
+        B계좌 입금 (update ...
+    end
+    논리적인 단위로 transaction
+    전체 성공 아니면 실패
+    commit or rollback
+
+    >>업무 처리 >> JDBC >> autocommit 옵션 >> false 전환
+    >>반드시  java code에서 commit , rollback 강제
+
+
+    실습쿼리 ^^
+    create table dmlemp
+    as
+      select * from emp;
+
+    select * from user_constraints where table_name='DMLEMP';
+
+    alter table dmlemp
+    add constraint pk_dmlemp_empno primary key(empno);
+
+    select * from dmlemp;
+*/
+public class Ex02_Oracle_DML_Insert {
+    public static void main(String[] args) {
+        Connection conn = null;
+        Statement stmt = null;
+
+        //드라이버 로딩 코드는 버전업이 되면서, 생략 가능해졌습니다.
+        try {
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "KOSA", "1004");
+            stmt = conn.createStatement();
+
+            String sql = "insert into dmlemp(empno, ename, deptno) values (100, '홍길동', 10)";
+
+            int rowcount = stmt.executeUpdate(sql); //결과 집합이 없다. select 과 다르네요.
+            if(rowcount > 0) {
+                System.out.println("반영된 행의 수 : " + rowcount);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                stmt.close();
+                conn.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        /*
+            이렇게 하면 Commit 을 하지 않아도 실반영이 되어버립니다.
+         */
+    }
+}
