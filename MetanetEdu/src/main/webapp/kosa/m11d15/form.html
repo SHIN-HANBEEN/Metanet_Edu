@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--
+    form 태그는 전송을 담당하는 태그입니다.
+
+    목적지가 필요하겠죠.
+    action 은 목적지입니다.
+    jsp 로 보내는 거죠.
+
+    method 는 post 와 같은 HTTP 통신 방식을 정해줍니다.
+    get 은 배를 타고 보내는 방식인데요, ?id=kglim&pwd=1004
+    이런 식으로 노출되서 보내게 됩니다.
+    get 방식은 안좋은건가요?
+    음, 그렇게 말하기 어려운게, hyperlink 방식으로 보낼 때는
+    필연적으로 사용할 수밖에 없습니다.
+    보안상 안좋긴 한데, 게시판 페이징 처리 등을 위해 사용하기도 합니다.
+
+    post 는 http 통신 규약에 따라서 header 안에 숨겨서 보내게 됩니다.
+    그래서 목적에 따라서 post 를 사용하는데, 거의
+    대부분의 경우에 post 를 사용하게 됩니다.
+
+    form 태그에는 전송을 담당하는 선장님이 필요한데요.
+    input 태그와 img 태그는 내부적으로 장착되어 있습니다.
+    button 은 js 로 따로 처리를 해주어야 가능하죠.
+
+ -->
+<body>
+    <h3> 로그인 </h3>
+    <form action="Ex08_jsp" method="post">
+        ID:<input type="text" name="id"><br>
+        PWD:<input type="password" name="pwd"><br>
+        <input type="submit" value="전송하기">
+        <input type="reset" value="취소하기">
+    </form>
+</body>
+</html>
