@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {margin: 0px;}
+        div { margin: 20px;
+                padding: 20px;
+                border: 20px solid gray;
+                 width: 500px; }
+        .contentbox { box-sizing: content-box; } /* 이게 디폴트 값입니다. */
+        .borderbox { box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="contentbox">content-box</p>
+    </div>
+    <div>
+        <p class="borderbox">border-box</p>
+    </div>
+</body>
+</html>
