@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+        버튼 클릭하면 이미지 슬라이드 기능 구현해보기
+    -->
+    <h3>DOM 슬라이드</h3>
+    <img src="./images/image1.jpg" alt="이미지" id="imgs" width="200" height="200">
+    <hr>
+    <a href="#" id="prv">이전</a>||<a href="#" id="next">다음</a>
+
+    <script>
+        var currentIndex = 0;
+        var images = ["./images/image1.jpg", "./images/image2.jpg", "./images/image3.jpg"]; // Add more image URLs as needed
+
+        // Get the img element by its id
+        var imgElement = document.getElementById('imgs');
+
+        let prv = document.getElementById('prv');
+        let next = document.getElementById('next');
+
+        //prv
+        prv.addEventListener('click', function() {
+            if (currentIndex == 0) {
+                currentIndex=2;
+            } else {
+                currentIndex--;
+            }
+
+            var newImageSrc = images[currentIndex];
+            imgElement.src = newImageSrc;
+        });
+
+        //next
+        next.addEventListener('click', function() {
+            if (currentIndex == 2) {
+                currentIndex=0;
+            } else {
+                currentIndex++;
+            }
+
+            var newImageSrc = images[currentIndex];
+            imgElement.src = newImageSrc;
+        });
+    </script>
+</body>
+</html>
+<script>
+
+</script>

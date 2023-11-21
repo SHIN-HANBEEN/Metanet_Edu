@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let myobj = {name:"john", age:30, city:"seoul"};
+
+        //json 형태의 문자열 -> 객체로 : parse( )
+        //Json 객체를 -> 문자열로 : stringfy( )
+
+        const str = JSON.stringify(myobj); //{"name":"john","age":30,"city":"seoul"} 이렇게 출력됩니다.
+        console.log(str);
+        //왜 "" 로 다 바꿔놓았을까요? 바로, 반대로 parse( ) 를 진행하는 경우를 염두에 둔
+        //조치이기 때문에 그렇습니다. 문자열 데이터를 객체 데이터로 바꾸려면
+        //JSON 이라는 형태의 문자열이 반드시 속성값은 "" 또는 ''안에 들어있어야 합니다.
+
+        let myString = '{"name":"john", "age":30, "city":"seoul"}';
+        console.log(JSON.parse(myString));
+
+        strObj = JSON.parse(myString);
+        console.log(strObj.name);
+        console.log(strObj["name"]); //객체["속성명"] 으로 접근해야합니다.
+
+        /*
+            json 은 common.json 으로 json 확장자를 사용합니다.
+            이런 형식을 MIME 이라고 하는 것으로 찍어볼 수 있는데요.
+            application/json 이라고 확인됩니다.
+
+            xml 은 common.xml 입니다.
+        */
+        let mycars;
+        mycars = {"name":"king", "age":20,
+                  "cars":[
+                    {"name":"Ford", "model":["Mustang", "Focus"]},
+                    {"name":"BMW", "model":["520", "x5", "x7"]},
+                    {"name":"Fiat", "model":["500", "panda"]}
+                  ]
+        };
+        console.log(mycars.cars);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

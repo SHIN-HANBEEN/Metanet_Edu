@@ -1,0 +1,18 @@
+for (let indet in data.items) {
+        carousel.innerHTML +=
+        "<div class='carousel-item active'>" +
+            "<img src=" + data.items[index].link + " alt='Los Angeles' class='d-block' style='width:100%'>" +
+        "</div>"
+    }
+
+    for (let index in data.items) {
+            carouselMy.innerHTML +=
+            "<div class='carousel-item active'>" +
+                "<img src=" + data.items[index].link + " alt='Los Angeles' class='d-block' style='width:100%'>" +
+            "</div>"
+        }
+
+
+        for (let index in data.items) {
+                console.log(data.items[index].media.m);
+            }

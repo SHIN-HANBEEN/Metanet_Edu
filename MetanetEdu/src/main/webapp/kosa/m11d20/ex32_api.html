@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2 class="day">일별 박스오피스</h2>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Rank</th>
+      <th>movieNm</th>
+      <th>salesAcc</th>
+    </tr>
+    </thead>
+    <tbody class="tbody">
+<!--    <tr>-->
+<!--      <td>John</td>-->
+<!--      <td>Doe</td>-->
+<!--      <td>john@example.com</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Mary</td>-->
+<!--      <td>Moe</td>-->
+<!--      <td>mary@example.com</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>July</td>-->
+<!--      <td>Dooley</td>-->
+<!--      <td>july@example.com</td>-->
+<!--    </tr>-->
+    </tbody>
+  </table>
+</div>
+
+<script>
+  const data = {
+      "boxOfficeResult": {
+        "boxofficeType": "일별 박스오피스",
+        "showRange": "20231115~20231115",
+        "dailyBoxOfficeList": [{
+          "rnum": "1",
+          "rank": "1",
+          "rankInten": "0",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20200622",
+          "movieNm": "소년들",
+          "openDt": "2023-11-01",
+          "salesAmt": "62008094",
+          "salesShare": "15.3",
+          "salesInten": "-23769452",
+          "salesChange": "-27.7",
+          "salesAcc": "3964138128",
+          "audiCnt": "7580",
+          "audiInten": "-1488",
+          "audiChange": "-16.4",
+          "audiAcc": "411924",
+          "scrnCnt": "553",
+          "showCnt": "928"
+        }, {
+          "rnum": "2",
+          "rank": "2",
+          "rankInten": "1",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20228819",
+          "movieNm": "30일",
+          "openDt": "2023-10-03",
+          "salesAmt": "51823974",
+          "salesShare": "12.8",
+          "salesInten": "-9501027",
+          "salesChange": "-15.5",
+          "salesAcc": "20651488193",
+          "audiCnt": "5594",
+          "audiInten": "-1184",
+          "audiChange": "-17.5",
+          "audiAcc": "2100633",
+          "scrnCnt": "388",
+          "showCnt": "617"
+        }, {
+          "rnum": "3",
+          "rank": "3",
+          "rankInten": "17",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20217425",
+          "movieNm": "더 와일드: 야수들의 전쟁",
+          "openDt": "2023-11-15",
+          "salesAmt": "46985900",
+          "salesShare": "11.6",
+          "salesInten": "45109900",
+          "salesChange": "2404.6",
+          "salesAcc": "57541900",
+          "audiCnt": "5492",
+          "audiInten": "5358",
+          "audiChange": "3998.5",
+          "audiAcc": "6866",
+          "scrnCnt": "221",
+          "showCnt": "527"
+        }, {
+          "rnum": "4",
+          "rank": "4",
+          "rankInten": "0",
+          "rankOldAndNew": "NEW",
+          "movieCd": "20235631",
+          "movieNm": "비투비 타임 : 비투게더 더 무비",
+          "openDt": "2023-11-15",
+          "salesAmt": "90509500",
+          "salesShare": "22.3",
+          "salesInten": "90509500",
+          "salesChange": "100",
+          "salesAcc": "90509500",
+          "audiCnt": "4526",
+          "audiInten": "4526",
+          "audiChange": "100",
+          "audiAcc": "4526",
+          "scrnCnt": "32",
+          "showCnt": "52"
+        }, {
+          "rnum": "5",
+          "rank": "5",
+          "rankInten": "-3",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20225894",
+          "movieNm": "뉴 노멀",
+          "openDt": "2023-11-08",
+          "salesAmt": "37073157",
+          "salesShare": "9.1",
+          "salesInten": "-28094879",
+          "salesChange": "-43.1",
+          "salesAcc": "767782559",
+          "audiCnt": "4032",
+          "audiInten": "-3045",
+          "audiChange": "-43",
+          "audiAcc": "78976",
+          "scrnCnt": "303",
+          "showCnt": "396"
+        }, {
+          "rnum": "6",
+          "rank": "6",
+          "rankInten": "3",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20202247",
+          "movieNm": "싱글 인 서울",
+          "openDt": "2023-11-29",
+          "salesAmt": "31455000",
+          "salesShare": "7.7",
+          "salesInten": "25488000",
+          "salesChange": "427.1",
+          "salesAcc": "37422000",
+          "audiCnt": "3495",
+          "audiInten": "2832",
+          "audiChange": "427.1",
+          "audiAcc": "4158",
+          "scrnCnt": "15",
+          "showCnt": "15"
+        }, {
+          "rnum": "7",
+          "rank": "7",
+          "rankInten": "6",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20232284",
+          "movieNm": "만분의 일초",
+          "openDt": "2023-11-15",
+          "salesAmt": "14638930",
+          "salesShare": "3.6",
+          "salesInten": "11353930",
+          "salesChange": "345.6",
+          "salesAcc": "36903730",
+          "audiCnt": "2411",
+          "audiInten": "2046",
+          "audiChange": "560.5",
+          "audiAcc": "4776",
+          "scrnCnt": "68",
+          "showCnt": "104"
+        }, {
+          "rnum": "8",
+          "rank": "8",
+          "rankInten": "-1",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20197122",
+          "movieNm": "1947 보스톤",
+          "openDt": "2023-09-27",
+          "salesAmt": "11111000",
+          "salesShare": "2.7",
+          "salesInten": "6258500",
+          "salesChange": "129",
+          "salesAcc": "9376394898",
+          "audiCnt": "1558",
+          "audiInten": "881",
+          "audiChange": "130.1",
+          "audiAcc": "1014659",
+          "scrnCnt": "31",
+          "showCnt": "32"
+        }, {
+          "rnum": "9",
+          "rank": "9",
+          "rankInten": "22",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20232077",
+          "movieNm": "어른 김장하",
+          "openDt": "2023-11-15",
+          "salesAmt": "11575400",
+          "salesShare": "2.8",
+          "salesInten": "11218400",
+          "salesChange": "3142.4",
+          "salesAcc": "35178000",
+          "audiCnt": "1402",
+          "audiInten": "1351",
+          "audiChange": "2649",
+          "audiAcc": "3985",
+          "scrnCnt": "90",
+          "showCnt": "108"
+        }, {
+          "rnum": "10",
+          "rank": "10",
+          "rankInten": "-4",
+          "rankOldAndNew": "OLD",
+          "movieCd": "20224517",
+          "movieNm": "용감한 시민",
+          "openDt": "2023-10-25",
+          "salesAmt": "9408417",
+          "salesShare": "2.3",
+          "salesInten": "2644971",
+          "salesChange": "39.1",
+          "salesAcc": "2424812119",
+          "audiCnt": "1119",
+          "audiInten": "295",
+          "audiChange": "35.8",
+          "audiAcc": "264502",
+          "scrnCnt": "37",
+          "showCnt": "39"
+        }]
+      }
+    };
+  console.log(data);
+
+  let dayElements = document.getElementsByClassName("day");
+  console.log(dayElements);
+  console.log(data.boxOfficeResult.showRange);
+  dayElements[0].innerHTML += " " + data.boxOfficeResult.showRange;
+
+  let table = document.querySelector(".table");
+  console.log(table);
+
+  let tbody = document.querySelector(".tbody");
+  for(let index in data.boxOfficeResult.dailyBoxOfficeList) {
+    tbody.innerHTML +=
+                      "<tr>" +
+                        "<td>" + data.boxOfficeResult.dailyBoxOfficeList[index].rank + "</td>" +
+                        "<td>" + data.boxOfficeResult.dailyBoxOfficeList[index].movieNm  + "</td>" +
+                        "<td>" + data.boxOfficeResult.dailyBoxOfficeList[index].salesAcc  + "</td>" +
+                      "</tr>"
+  }
+</script>
+</body>
+</html>

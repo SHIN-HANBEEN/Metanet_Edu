@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying Paper Airplane</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #airplane {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            clip-path: polygon(100% 0%, 0 100%, 100% 100%);
+            transform-origin: bottom right;
+            transition: transform 1s ease-in-out;
+        }
+
+        #launchBtn {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<button id="launchBtn" onclick="launchAirplane()">Launch Airplane</button>
+<div id="airplane"></div>
+
+<script>
+    function launchAirplane() {
+        var airplane = document.getElementById('airplane');
+        var launchBtn = document.getElementById('launchBtn');
+
+        // Hide the button
+        launchBtn.style.display = 'none';
+
+        // Set initial position and rotate the airplane
+        airplane.style.transform = 'translate(0, 0) rotate(0deg)';
+
+        // Animate the airplane flying
+        setTimeout(function () {
+            airplane.style.transform = 'translate(calc(100vw - 50px), calc(100vh - 50px)) rotate(180deg)';
+        }, 10);
+
+        // Open the URL after the animation completes
+        setTimeout(function () {
+            window.location.href = 'https://www.example.com'; // Replace with your desired URL
+        }, 1000); // Adjust the time according to your animation duration
+    }
+</script>
+</body>
+</html>
