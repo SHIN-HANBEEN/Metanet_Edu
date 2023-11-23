@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script>
+        function myFunc() {
+
+        }
+
+        let txt="";
+        const numbers=[45, 5, 8, 16, 25];
+        function myFunc2(value, index, array) {
+            txt = "(" + value + ")" + "[" + index + "]" + "[" + array + "]";
+            console.log(txt);
+            // 이 함수를 콜백함수의 용도로 사용할 겁니다.
+        }
+        numbers.forEach(myFunc2);
+
+        const numbers2 = [65, 44, 12, 4];
+        const newArray = numbers2.map(myFunc3); //map 은 배열을 반환해주는데, map 을 쓰는 이유는
+        // 조작된 배열을 얻기 위해서입니다. 콜백함수를 하나 만들어서 사용해보죠.
+        function myFunc3(value, index, array) {
+            return value * 10 + index;
+        }
+        console.log(newArray);
+
+        //응용을 해봅시다.
+        let evens = [2, 4, 6, 8];
+        let odds = evens.map(value => value + 1);
+        console.log(odds);
+
+        let nums = evens.map((value, index) => value + index);
+        console.log(nums);
+
+        // 만약 map 함수가 없었다면, 아래와 같이 작성해야 했을 것이다.
+        let arr=[];
+        evens.forEach(
+            value => {
+                if(value % 2 === 0) {
+                    arr.push(value)
+                }
+            }
+        )
+    </script>
+</body>
+</html>

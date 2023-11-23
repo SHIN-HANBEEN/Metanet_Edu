@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="803ade4f-3f27-4a17-84f4-1ece1e27852f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../MetanetEdu/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MetanetEdu/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MetanetEdu2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MetanetEdu2/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/or/kosa/dao/DeptDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/or/kosa/dao/DeptDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +21,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -38,9 +54,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2YSoXbtHJYWeRPKMaLub4OlMZcZ" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -49,35 +65,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Metanet_edu/java/Labs/WebJSP_JDBC_HomeWork",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3908046",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Metanet_edu/java/Labs/ServletEdu_11_23&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3908046&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\resources" />
+      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\java\kr\or\kosa\controller" />
       <recent name="C:\Metanet_edu\java\Labs\demo\src\main\webapp" />
+      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\java\kr\or\kosa\controller" />
+      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\webapp\m11d23" />
+      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\webapp\m11d22" />
+      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\webapp" />
       <recent name="C:\Metanet_edu\java\Labs\demo\src\main\webapp\m11d21" />
-      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\java\kr\or\kosa\utils" />
-      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\java\kr\or\kosa\dao" />
-      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\java\kr\or\kosa\dto" />
-      <recent name="C:\Metanet_edu\java\Labs\demo\src\main\webapp\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kr.or.kosa.dto" />
+      <recent name="kr.or.kosa.dao" />
     </key>
   </component>
   <component name="RunManager">
@@ -179,6 +200,10 @@
       <option name="presentableId" value="Default" />
       <updated>1700528386027</updated>
       <workItem from="1700528387094" duration="18118000" />
+      <workItem from="1700611270175" duration="21199000" />
+      <workItem from="1700701099870" duration="2271000" />
+      <workItem from="1700703406357" duration="45000" />
+      <workItem from="1700721354699" duration="149000" />
     </task>
     <servers />
   </component>
