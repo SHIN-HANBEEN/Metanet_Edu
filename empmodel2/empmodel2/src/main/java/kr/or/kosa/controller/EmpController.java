@@ -31,6 +31,7 @@ public class EmpController extends HttpServlet {
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ParseException, java.text.ParseException {
         request.setCharacterEncoding("UTF-8");
         String command = request.getParameter("cmd");
+        String empno = request.getParameter("empno");
         Action action = null;
         ActionForward forward = null;
         EmpDao dao = new EmpDao();
@@ -55,12 +56,19 @@ public class EmpController extends HttpServlet {
         } else if (command.equals("deleteEmp.do")) {
             action = new DeleteServiceAction();
             forward = action.execute(request, response);
+        } else if (command.equals("checkEmp.do")) {
+            action = new CheckEmpServiceAction();
+            forward = action.execute(request, response);
         }
-
         if(forward != null) {
             if(forward.isRedirect()) { // true // location.href="" 새로운 페이지 처리
                 response.sendRedirect(forward.getPath());
-            }else {
+            } else if (command.equals("checkEmp.do")&&!empno.isEmpty()) {
+                forward.setPath("/empadd.jsp");
+                RequestDispatcher dis = request.getRequestDispatcher(forward.getPath());
+                System.out.println(request.getAttribute("isNull"));
+                dis.forward(request, response);
+            } else {
                 RequestDispatcher dis = request.getRequestDispatcher(forward.getPath());
                 dis.forward(request, response);
             }

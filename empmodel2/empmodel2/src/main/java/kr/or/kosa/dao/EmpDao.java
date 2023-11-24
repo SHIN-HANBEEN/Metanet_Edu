@@ -48,7 +48,7 @@ public class EmpDao {
     public Emp findEmpByEmpNo(int empno){
         Connection conn = null;
         PreparedStatement pstmt = null;
-        Emp emp = new Emp();
+        Emp emp = null;
 
         try {
             conn = ConnectionHelper.getConnection("oracle");
@@ -59,6 +59,7 @@ public class EmpDao {
 
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
+                emp = new Emp();
                 emp.setEmpno(rs.getInt("empno"));
                 emp.setEname(rs.getString("ename"));
                 emp.setJob(rs.getString("job"));
@@ -68,6 +69,7 @@ public class EmpDao {
                 emp.setComm(rs.getInt("comm"));
                 emp.setDeptno(rs.getInt("deptno"));
             }
+            System.out.println(emp);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());

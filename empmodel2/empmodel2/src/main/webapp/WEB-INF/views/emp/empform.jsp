@@ -1,5 +1,6 @@
 
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,10 @@
     <!-- Material Kit CSS -->
     <link href="./css/material-kit.min.css" rel="stylesheet" />
 
+
 </head>
 <body>
+
 <br><br><br><br><br>
 <section>
     <div class="container py-4">
@@ -24,7 +27,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="input-group input-group-dynamic mb-4">
-                                    <input class="form-control" name="empno" placeholder="empno" type="text" >
+                                    <input id="empnoinput" class="form-control" name="empno" placeholder="empno" type="text" >
+                                    <div onclick="checkEmp()" class="btn bg-gradient-dark w-100">중복확인하기</div>
                                 </div>
                             </div>
                             <div class="col-md-6 ps-2">
@@ -81,5 +85,35 @@
     </div>
 </section>
 </body>
+
+<%--<script>--%>
+<%--    function checkEmp() {--%>
+<%--        let empno = document.getElementById("empnoinput").value;--%>
+<%--        let apiUrl = `/emp.do?cmd=checkEmp.do&empno=`+empno;--%>
+
+<%--        fetch(apiUrl)--%>
+<%--            .then(response => {--%>
+<%--                if (!response.ok) {--%>
+<%--                    throw new Error(`HTTP error! Status: ${requestScope.status}`);--%>
+<%--                }--%>
+<%--                return response.json();--%>
+<%--            })--%>
+<%--            .then(data => {--%>
+<%--                console.log(data);--%>
+<%--                if(data.isNull) {--%>
+<%--                    //alert here--%>
+<%--                    alert('검색하신 empno로 생성 가능합니다.');--%>
+<%--                } else {--%>
+<%--                    alert('검색하신 empno 가 이미 있습니다.');--%>
+<%--                }--%>
+<%--            })--%>
+<%--            .catch(error => {--%>
+<%--                // Handle errors during the fetch--%>
+<%--                console.error('Fetch error:', error);--%>
+<%--            });--%>
+<%--    }--%>
+<%--</script>--%>
+<!-- Import your JavaScript file -->
+<script src="js/emp.js"></script>
 </html>
 
