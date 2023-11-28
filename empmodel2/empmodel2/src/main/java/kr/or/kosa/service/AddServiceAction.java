@@ -14,6 +14,8 @@ public class AddServiceAction implements Action {
     @Override
     public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
         ActionForward forward = new ActionForward();
+
+
         int empno = Integer.parseInt(request.getParameter("empno"));
         String ename = request.getParameter("ename");
         String job = request.getParameter("job");

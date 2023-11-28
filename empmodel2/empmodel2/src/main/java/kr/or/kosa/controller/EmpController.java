@@ -34,9 +34,6 @@ public class EmpController extends HttpServlet {
         String empno = request.getParameter("empno");
         Action action = null;
         ActionForward forward = null;
-        EmpDao dao = new EmpDao();
-
-        String viewpage = "";
 
         if (command.equals("findOne.do")) {
             action = new FindOneServiceAction();
