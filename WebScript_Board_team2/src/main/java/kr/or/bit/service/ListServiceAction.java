@@ -13,9 +13,10 @@ import java.util.List;
 
 public class ListServiceAction implements Action {
     @Override
-    public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+    public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws NamingException {
         System.out.println("listServiceAction execute");
 		ActionForward forward = new ActionForward();
+        //DAO BoardService 는 그냥 DAO임
         BoardService service = BoardService.getInBoardService();
 
         //게시물 총 건수

@@ -14,5 +14,4 @@ import lombok.Data;
 public class ActionForward {
    private boolean isRedirect = false; //뷰의 전환 (redirect <> forward)
    private String path=null; //이동경로 (뷰의 주소)
-
 }

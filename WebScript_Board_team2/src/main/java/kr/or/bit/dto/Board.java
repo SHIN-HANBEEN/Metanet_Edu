@@ -9,17 +9,17 @@ public class Board {  //SELECT * FROM jspboard
 	private String content;
 	//not null (필수 입력)
 	private Date writedate; //default SYSDATE
-	private int readnum;    //default 0
+	private int readnum;    //default 0 조회수
 	
-	private String filename;
+	private String filename; //파일 이름만 서버에 올리는거야.
 	private int filesize;
 	private String homepage;
 	private String email;
 	//부가 입력 사항
 	
 	//계층형 (답글)
-	private int refer;//글의 묶음
-	private int depth;//글의 들여쓰기
+	private int refer;//글의 묶음 (답글의 대상)
+	private int depth;//글의 들여쓰기 default 0, 1, 2 증가...
 	private int step;//글의 순서
 
 	public Board() {}
